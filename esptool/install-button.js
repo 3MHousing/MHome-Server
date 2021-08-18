@@ -24,7 +24,7 @@ class t extends HTMLElement {
         )),
         e.name = "activate";
         const n = document.createElement("button");
-        if (n.innerText = "INSTALL",
+        if (n.innerText = "Cài đặt",
         e.append(n),
         "adoptedStyleSheets"in Document.prototype && "replaceSync"in CSSStyleSheet.prototype) {
             const e = new CSSStyleSheet;
