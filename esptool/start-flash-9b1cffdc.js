@@ -3404,8 +3404,8 @@ const os = async(e,t,s,i)=>{
     }
     window.esploader = d,
     o({
-        state: "Đang khởi tạo",
-        message: "Đang khởi tạo ...",
+        state: "initializing",
+        message: "Initializing...",
         details: {
             done: !1
         }
@@ -3438,8 +3438,8 @@ const os = async(e,t,s,i)=>{
     }
     )(d),
     o({
-        state: "initializing",
-        message: `D. Found ${a}`,
+        state: "Đang khởi tạo",
+        message: `Đã khởi tạo thành công. Thiết bị tìm thấy ${a}`,
         details: {
             done: !0
         }
@@ -3455,8 +3455,8 @@ const os = async(e,t,s,i)=>{
         r = await h
     } catch (e) {
         return o({
-            state: "error",
-            message: `Unable to fetch manifest: ${e.message}`,
+            state: "error - Lỗi",
+            message: `Không thể tìm nạp tệp: ${e.message}`,
             details: {
                 error: "fetch_manifest_failed",
                 details: e
