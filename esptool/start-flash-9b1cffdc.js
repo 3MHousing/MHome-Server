@@ -3467,7 +3467,7 @@ const os = async(e,t,s,i)=>{
     if (n = r.builds.find((e=>e.chipFamily === a)),
     o({
         state: "manifest",
-        message: `Found manifest for ${r.name}`,
+        message: `Đã tìm thấy firmware cho ${r.name}`,
         details: {
             done: !0
         }
@@ -3483,8 +3483,8 @@ const os = async(e,t,s,i)=>{
         }),
         void await d.disconnect();
     o({
-        state: "preparing",
-        message: "Preparing installation...",
+        state: "Chuẩn bị",
+        message: "Đang chuẩn bị cài đặt...",
         details: {
             done: !1
         }
@@ -3493,7 +3493,7 @@ const os = async(e,t,s,i)=>{
         const t = new URL(e.path,l).toString()
           , s = await fetch(t);
         if (!s.ok)
-            throw new Error(`Downlading firmware ${e.path} failed: ${s.status}`);
+            throw new Error(`Đang tải firmware ${e.path} Lỗi: ${s.status}`);
         return s.arrayBuffer()
     }
     ))
