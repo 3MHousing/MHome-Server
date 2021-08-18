@@ -3404,8 +3404,8 @@ const os = async(e,t,s,i)=>{
     }
     window.esploader = d,
     o({
-        state: "initializing",
-        message: "Initializing...",
+        state: "Đang khởi tạo",
+        message: "Đang khởi tạo ...",
         details: {
             done: !1
         }
@@ -3439,7 +3439,7 @@ const os = async(e,t,s,i)=>{
     )(d),
     o({
         state: "initializing",
-        message: `Initialized. Found ${a}`,
+        message: `D. Found ${a}`,
         details: {
             done: !0
         }
