@@ -3391,11 +3391,11 @@ const os = async(e,t,s,i)=>{
     try {
         d = await (async e=>{
             const t = await navigator.serial.requestPort();
-            return e.log("Connecting..."),
+            return e.log("Đang kết nối..."),
             await t.open({
                 baudRate: 115200
             }),
-            e.log("Connected successfully."),
+            e.log("Kết nối thành công."),
             new ns(t,e)
         }
         )(t)
@@ -3404,8 +3404,8 @@ const os = async(e,t,s,i)=>{
     }
     window.esploader = d,
     o({
-        state: "initializing",
-        message: "Initializing...",
+        state: "Đang khởi tạo",
+        message: "Đang khởi tạo...",
         details: {
             done: !1
         }
@@ -3415,8 +3415,8 @@ const os = async(e,t,s,i)=>{
     } catch (e) {
         return t.error(e),
         void (d.connected && (o({
-            state: "error",
-            message: "Failed to initialize. Try resetting your device or holding the BOOT button while selecting your serial port.",
+            state: "error - Lỗi",
+            message: "Khởi tạo thất bại. Hãy thử kết nối lại, giữ nút BOOT khi chọn cổng COM.",
             details: {
                 error: "failed_initialize",
                 details: e
@@ -3445,8 +3445,8 @@ const os = async(e,t,s,i)=>{
         }
     }),
     o({
-        state: "manifest",
-        message: "Fetching manifest...",
+        state: "Tìm nạp tệp tin",
+        message: "Đang tìm nạp tệp tin...",
         details: {
             done: !1
         }
@@ -3517,31 +3517,31 @@ const os = async(e,t,s,i)=>{
             void await d.disconnect()
         }
     o({
-        state: "preparing",
-        message: "Installation prepared",
+        state: "Đang chuẩn bị",
+        message: "Đã sẵn sàng cài đặt",
         details: {
             done: !0
         }
     }),
     i && (o({
-        state: "erasing",
-        message: "Erasing device...",
+        state: "Đang xóa",
+        message: "Đang xóa thiết bị...",
         details: {
             done: !1
         }
     }),
     await m.eraseFlash(),
     o({
-        state: "erasing",
-        message: "Device erased",
+        state: "Đang xóa",
+        message: "Đã xóa thành công",
         details: {
             done: !0
         }
     }));
     let w = 0;
     o({
-        state: "writing",
-        message: `Writing progress: ${w}%`,
+        state: "Đang nạp",
+        message: `Tiến trình nạp: ${w}%`,
         details: {
             bytesTotal: _,
             bytesWritten: 0,
@@ -3556,8 +3556,8 @@ const os = async(e,t,s,i)=>{
                 const t = Math.floor((y + e) / _ * 100);
                 t !== w && (w = t,
                 o({
-                    state: "writing",
-                    message: `Writing progress: ${t}%`,
+                    state: "Đang nạp",
+                    message: `Tiến trình nạp: ${t}%`,
                     details: {
                         bytesTotal: _,
                         bytesWritten: y + e,
@@ -3581,8 +3581,8 @@ const os = async(e,t,s,i)=>{
     }
     var b;
     o({
-        state: "writing",
-        message: "Writing complete",
+        state: "Đang nạp",
+        message: "Đã nạp thành công",
         details: {
             bytesTotal: _,
             bytesWritten: y,
@@ -3594,8 +3594,8 @@ const os = async(e,t,s,i)=>{
     await d.hardReset(),
     await d.disconnect(),
     o({
-        state: "finished",
-        message: "All done!"
+        state: "Hoàn thành",
+        message: "Tuyệt vời. Đã nạp thành công!"
     })
 }
   , ls = window.ShadowRoot && (void 0 === window.ShadyCSS || window.ShadyCSS.nativeShadow) && "adoptedStyleSheets"in Document.prototype && "replace"in CSSStyleSheet.prototype
