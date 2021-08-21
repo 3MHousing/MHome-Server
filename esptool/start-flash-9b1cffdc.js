@@ -3439,7 +3439,7 @@ const os = async(e,t,s,i)=>{
     )(d),
     o({
         state: "Đang khởi tạo",
-        message: `Đã khởi tạo thành công. Thiết bị tìm thấy ${a}`,
+        message: `Đã khởi tạo thành công cho thiết bị ${a}`,
         details: {
             done: !0
         }
