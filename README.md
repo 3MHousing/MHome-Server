@@ -1,5 +1,5 @@
-# BLog Kỹ thuật
-Kho lưu trữ để nhớ và chia sẻ
+# KHO THƯ VIỆN DỮ LIỆU
+Lưu trữ & chia sẻ
 
 Thông tin liên hệ:
 E-mail: phuongduyjsc@gmail.com
